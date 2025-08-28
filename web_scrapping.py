@@ -6,6 +6,8 @@ def fetch_page(url):
     # response.raise_for_status()  # Ensure we notice bad responses
     # return response.text
     soup = BeautifulSoup(response.content, 'html.parser')
+    print(soup.title.string) #printing the title of the page
     print(soup.find_all("a")) #finding all anchor tags
+
 
 fetch_page(input("Enter URL: "))
